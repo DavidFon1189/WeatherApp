@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="error_de_comunicacion_servidor">Error de comunicación con el servidor</string>
+</resources>
