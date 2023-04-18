@@ -46,10 +46,10 @@ class MainActivity : AppCompatActivity() {
                     //mostrar la info en la pantalla, si da tiempo
                     Log.d("TAG", getWeather.name)
                 } else {
-                    Toast.makeText(this, "Categorías no encontradas", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, " no encontradas", Toast.LENGTH_SHORT).show()
                 }
             } else {
-                Toast.makeText(this, "Categorías no encontradas", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, " no encontradas", Toast.LENGTH_SHORT).show()
             }
         })
     }
