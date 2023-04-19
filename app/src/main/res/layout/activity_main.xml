@@ -44,11 +44,13 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tv_warther"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Weather"/>
 
                     <TextView
+                        android:id="@+id/tv_weather_condition"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Condition"/>
@@ -92,9 +94,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Weather"/>
+                        android:text="Degree"/>
 
                     <TextView
+                        android:id="@+id/tv_degree_condition"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Condition"/>
@@ -142,14 +145,16 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tv_temp_min"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Weather"/>
+                        android:text="Minimum"/>
 
                     <TextView
+                        android:id="@+id/tv_temp_max"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Condition"/>
+                        android:text="Maximum"/>
 
                 </LinearLayout>
 
@@ -190,12 +195,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Weather"/>
+                        android:text="Wind"/>
 
                     <TextView
+                        android:id="@+id/tv_miles_hour"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Condition"/>
+                        android:text="miles/hour"/>
 
                 </LinearLayout>
 
@@ -210,7 +216,7 @@
         android:orientation ="horizontal">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_weight="1"
             app:cardCornerRadius="10dp"
@@ -246,14 +252,16 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tv_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Weather"/>
+                        android:text="Name"/>
 
                     <TextView
+                        android:id="@+id/tv_country"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Condition"/>
+                        android:text="Contry"/>
 
                 </LinearLayout>
 
@@ -286,6 +294,7 @@
                             android:background="@drawable/ic_sun"/>
 
                         <TextView
+                            android:id="@+id/tv_sunrise"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Sunrise"/>
@@ -305,6 +314,7 @@
                             android:background="@drawable/ic_sunset"/>
 
                         <TextView
+                            android:id="@+id/tv_sunset"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Sunset"/>

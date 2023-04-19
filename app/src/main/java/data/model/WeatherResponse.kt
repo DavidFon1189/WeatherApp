@@ -5,10 +5,10 @@ data class WeatherResponse(
     val weather: ArrayList<Weather>,
     val base: String,
     val main: Main,
-    val visibility: Double,
+    val visibility: Int,
     val wind: Wind,
     val clouds: Clouds,
-    val dt: Double,
+    val dt: Int,
     val sys: Sys,
     val timezone: Double,
     val id: Int,
@@ -33,16 +33,16 @@ data class Main(
     val feels_like: Double,
     val temp_min: Double,
     val temp_max: Double,
-    val pressure: Double,
-    val humidity: Double,
-    val sea_level: Double,
-    val grnd_level: Double,
+    val pressure: Int,
+    val humidity: Int,
+    val sea_level: Int,
+    val grnd_level: Int,
 )
 
 data class Wind(
-    val speed: Int,
-    val deg: String,
-    val gust: String
+    val speed: Double,
+    val deg: Int,
+    val gust: Double
 )
 
 data class Clouds(
@@ -50,9 +50,9 @@ data class Clouds(
 )
 
 data class Sys(
-    val type: Double,
+    val type: Int,
     val id: Int,
     val country: String,
-    val sunrise: Double,
-    val sunset: Double
+    val sunrise: Int,
+    val sunset: Int
 )

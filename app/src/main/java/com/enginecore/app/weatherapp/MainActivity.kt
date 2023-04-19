@@ -16,6 +16,7 @@ import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.enginecore.app.weatherapp.databinding.ActivityMainBinding
 import data.model.WeatherResponse
+import utils.DialogManager
 import viewmodel.WeatherViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -44,7 +45,14 @@ class MainActivity : AppCompatActivity() {
                 val getWeather: WeatherResponse? = it.body()
                 if (getWeather?.cod == 200) {
                     //mostrar la info en la pantalla, si da tiempo
-                    Log.d("TAG", getWeather.name)
+                    binding.tvWeatherCondition.text = getWeather.weather[0].main
+                    binding.tvDegreeCondition.text = getWeather.main.temp.toString() + "%"
+                    binding.tvTempMax.text = "Temp Max " + getWeather.main.temp_max.toString()
+                    binding.tvTempMin.text = "Temp Min " + getWeather.main.temp_min.toString()
+                    binding.tvMilesHour.text = getWeather.wind.speed.toString() + " miles/hour"
+                    binding.tvSunrise.text = getWeather.sys.sunrise.toString()
+                    binding.tvSunset.text = getWeather.sys.sunset.toString()
+                    binding.tvName.text = getWeather.name
                 } else {
                     Toast.makeText(this, " no encontradas", Toast.LENGTH_SHORT).show()
                 }
@@ -56,7 +64,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun isLoading() {
         weatherViewModel.isLoading.observe(this, Observer {
-//            progressbar(it)
+            progressbar(it)
         })
     }
 
@@ -72,7 +80,15 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private fun showPopupDialogError(subtitulo: String){
+    private fun progressbar(isLoading: Boolean) {
+        if (isLoading) {
+            DialogManager.progressBar(this)
+        } else {
+            DialogManager.progressBar(this).dismissAllowingStateLoss()
+        }
+    }
+
+    private fun showPopupDialogError(subtitulo: String) {
         val dialog = Dialog(this)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(true)
@@ -82,7 +98,10 @@ class MainActivity : AppCompatActivity() {
         dialog.window?.attributes?.windowAnimations = R.style.dialogAnimation
         val tvSubtituloDialog = dialog.findViewById<TextView>(R.id.tv_error)
         tvSubtituloDialog.text = subtitulo
-        dialog.window?.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+        dialog.window?.setLayout(
+            LinearLayout.LayoutParams.MATCH_PARENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        )
         dialog.show()
     }
 }
