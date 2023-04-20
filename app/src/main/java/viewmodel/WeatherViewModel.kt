@@ -20,7 +20,7 @@ class WeatherViewModel: ViewModel() {
     val isLoading = MutableLiveData<Boolean>()
     val errorGeneral = MutableLiveData<String>()
 
-    fun getWeather(lat: String, lon: String){
+    fun getWeather(lat: Double, lon: Double){
         isLoading.postValue(true)
         val getWeatherCU = WeatherCU(lat, lon)
         Log.d("TAG", "ENTRO")
