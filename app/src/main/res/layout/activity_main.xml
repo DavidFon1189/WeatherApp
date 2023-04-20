@@ -33,7 +33,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:background="@drawable/ic_weather"/>
+                android:background="@drawable/ic_umbrella"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -81,7 +81,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/ic_weather"/>
+                    android:background="@drawable/ic_torm"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -134,7 +134,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/ic_weather"/>
+                    android:background="@drawable/ic_temp"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -182,7 +182,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/ic_weather"/>
+                    android:background="@drawable/ic_air"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -240,7 +240,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/ic_weather"/>
+                    android:background="@drawable/ic_build"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"

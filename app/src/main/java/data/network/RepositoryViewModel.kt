@@ -7,8 +7,8 @@ class RepositoryViewModel {
 
     private val api = ServicesViewModel()
 
-    suspend fun getWeather(): Call<WeatherResponse>?{
-        val response = api.getWeather()
+    suspend fun getWeather(lat: Double, lon: Double): Call<WeatherResponse>?{
+        val response = api.getWeather(lat, lon)
         return response
     }
 }

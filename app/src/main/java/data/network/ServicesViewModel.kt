@@ -10,9 +10,9 @@ class ServicesViewModel {
 
     private val retrofit = RetrofitClient.provideAPIService()
 
-    suspend fun getWeather(): Call<WeatherResponse>?{
+    suspend fun getWeather(lat: Double, lon: Double): Call<WeatherResponse>?{
         return withContext(Dispatchers.IO){
-            val response = retrofit?.get_weather()
+            val response = retrofit?.getWeather(lat, lon)
             response
         }
     }
